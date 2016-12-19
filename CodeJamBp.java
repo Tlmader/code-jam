@@ -7,7 +7,7 @@ public class CodeJamBp {
 
   public static void main(String[] args) {
     input = new Scanner(System.in);
-    int x = parseInt();
+    int x = parseIntFromLine();
     for (int i = 1; i <= x; i++) {
       testCase(i);
     }
@@ -17,7 +17,7 @@ public class CodeJamBp {
     printCase(x, null);
   }
 
-  public static int parseInt() {
+  public static int parseIntFromLine() {
     return Integer.parseInt(input.nextLine());
   }
 

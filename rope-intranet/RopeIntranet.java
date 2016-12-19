@@ -13,17 +13,33 @@ public class RopeIntranet {
 
   public static void main(String[] args) {
     input = new Scanner(System.in);
-    int t = parseInt();
-    for (int i = 1; i <= t; i++) {
+    int x = parseIntFromLine();
+    for (int i = 1; i <= x; i++) {
       testCase(i);
     }
   }
 
   public static void testCase(int x) {
-    printCase(x, null);
+    int n = parseIntFromLine();
+    int[] a = new int[n];
+    int[] b = new int[n];
+    for (int i = 0; i < n; i++) {
+      String[] points = input.nextLine().split(" ");
+      a[i] = Integer.parseInt(points[0]);
+      b[i] = Integer.parseInt(points[1]);
+    }
+    int y = 0;
+    for (int i = 0; i < n; i++) {
+      for (int j = i + 1; j < n; j++) {
+        if ((a[i] < a[j] && b[i] > b[j]) || (a[i] > a[j] && b[i] < b[j])) {
+          y++;
+        }
+      }
+    }
+    printCase(x, y);
   }
 
-  public static int parseInt() {
+  public static int parseIntFromLine() {
     return Integer.parseInt(input.nextLine());
   }
 
