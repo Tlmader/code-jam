@@ -2,6 +2,12 @@ import java.util.Arrays;
 import java.util.stream.*;
 import java.util.Scanner;
 
+/**
+ * https://code.google.com/codejam/contest/351101/dashboard#s=p0
+ *
+ * @author tlmader.dev@gmail.com
+ * @since 2016-12-17
+ */
 public class StoreCredit {
 
   private static Scanner input;

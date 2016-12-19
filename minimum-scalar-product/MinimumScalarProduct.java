@@ -1,6 +1,12 @@
 import java.math.*;
 import java.util.*;
 
+/**
+ * https://code.google.com/codejam/contest/32016/dashboard#s=p0
+ *
+ * @author tlmader.dev@gmail.com
+ * @since 2016-12-18
+ */
 public class MinimumScalarProduct {
 
   private static Scanner input;

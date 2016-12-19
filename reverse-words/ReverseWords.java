@@ -1,5 +1,11 @@
 import java.util.*;
 
+/**
+ * https://code.google.com/codejam/contest/351101/dashboard#s=p1
+ *
+ * @author tlmader.dev@gmail.com
+ * @since 2016-12-17
+ */
 public class ReverseWords {
 
   private static Scanner input;
