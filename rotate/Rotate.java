@@ -10,7 +10,6 @@ import java.util.*;
 public class Rotate {
 
   private static Scanner input;
-  private static boolean debug = false;
 
   public static void main(String[] args) {
     input = new Scanner(System.in);
@@ -36,12 +35,6 @@ public class Rotate {
       while (board.get(0).size() < n) {
         board.get(0).add('.');
       }
-    }
-    for (int i = n - 1; i >= 0; i--) {
-      for (int j = 0; j < n; j++) {
-        logNoBreak(board.get(j).get(i).toString());
-      }
-      log("");
     }
     boolean red = false;
     boolean blue = false;
@@ -76,19 +69,15 @@ public class Rotate {
 
   public static boolean isJoin(List<List<Character>> board, int k, int i, int j, int x, int y) {
     if (k == 1) {
-      log("true");
       return true;
     }
     if (i + x < 0 || i + x >= board.size() ||
         j + y < 0 || j + y >= board.size()) {
-      log("false");
       return false;
     }
-    log(i + "," + j + ": " + board.get(i).get(j) + " ? " + board.get(i + x).get(j + y));
     if (board.get(i).get(j) == board.get(i + x).get(j + y)) {
       return isJoin(board, k - 1, i + x, j + y, x, y);
     }
-    log("false");
     return false;
   }
 
@@ -98,17 +87,5 @@ public class Rotate {
 
   public static void printCase(int num, Object result) {
     System.out.println("Case #" + num + ": " + result);
-  }
-
-  public static void log(String message) {
-    if (debug) {
-      System.out.println(message);
-    }
-  }
-
-  public static void logNoBreak(String message) {
-    if (debug) {
-      System.out.print(message);
-    }
   }
 }
